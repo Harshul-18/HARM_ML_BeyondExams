@@ -1,52 +1,85 @@
-# HARM - ML Challenge
 
-HARM, a ThinkBeyondExams intern team, aims to expand the world of AI with a little step of providing users a feature which shows the category of a YouTube video currently played.
+# HARM Bot - A YouTube API Bot
 
-Using the Python programming language and various Machine Learning concepts to create a Text classification and Image classification model which classifies a YouTube Video as Educational and cat- egorises it under category and sub-category as per the categories list of Beyond Exams Website.
+HARM Bot is a Streamlit application that provides various features related to YouTube videos and channels, such as predicting the category of educational videos, viewing channel statistics, searching for videos, predicting categories for playlist videos, and estimating the educational content percentage in a video.
 
+## Getting Started
 
-## Problem Statement
-A) Given a Youtube video:
-1. Determine if it is an educational video or not.
-2. Determine which category or subcategory of Beyon- dExam would it belong to.  
+Follow these steps to get the HARM Bot up and running on your system.
 
-B) Accuracy: 90percent on custom dataset that will be provided after proof of concept.  
-C) Should be able to run in near-real-time on a server.  
+### Prerequisites
 
-## Tools Using
+Before you begin, make sure you have Python 3 version below 3.10 (best supported for 3.9) installed on your system. You can download Python from [the official Python website](https://www.python.org/downloads/release/python-3109/).
+
+### Installation
+
+You can [download the source code as a ZIP file](https://drive.google.com/file/d/1Phlp0ovhml0VIU0T2pT69aM0Zrbk7vFs/view?usp=share_link) and extract it.
+
+2. Change to the project directory:
+
+Navigate to the extracted folder.
 ```
-scikit-learn
-bokeh
-chime
-matplotlib
-nltk
-numpy
-pandas
-Pillow
-pytube
-requests
-scikit_image
-stqdm
-streamlit
-streamlit_player
-toml
-youtube_search_python
-scrapetube
-youtube-dl
+cd HARM
 ```
 
-## Implementation till now  
-- Built a real worl Web Application, which takes an input of a YouTube Video URL and runs our algorithms of fetching and retrieving the information on it.
-- Made a dataset generation file, which generates the dataset as per our requirements and is generating the data right now.
-- Making the model file, to run it when the dataset is generated.
-- Till now not faced any big problems, everything is going as planned. Hope of that in future too.
+ 3. Virtual environment has been already created named `venv` for you. If you don't see it, create it using the below command
+```
+python -m venv venv
+```
 
-## [Github Project Link](https://github.com/Harshul-18/HARM-ML_challenge)  
-## [Demo Link](https://harshul-18-harm-bot-onlinestatsviewer-jeitt3.streamlit.app)  
-## [Video Demo Link](https://drive.google.com/file/d/10k2DOhI2KSb_Oj_PElT3snEuwgzbfq6j/view?usp=share_link)  
+ 4. Activate the virtual environment:
 
-## Project Members
-1. Harshul Nanda
-2. Abhijeet Saroha
-3. Rishabh Sagar
-4. Mayank Arora
+- On Windows:
+  ```
+  .\venv\Scripts\activate
+  ```
+
+- On macOS and Linux:
+  ```
+  source venv/bin/activate
+  ```
+
+### Note# _If you are using an Operating System other than MacOS with m1, or m2 processors, you have to remove the last line in the requirements.txt file `--no-cache-dir  --force-reinstall  --prefer-binary pyarrow` before proceeding to next step._
+
+5. Install the required packages:
+```
+pip install -r requirements.txt
+```
+
+### Running the Application
+
+To run the HARM Bot Streamlit application, execute the following command in the terminal:
+
+```
+streamlit run app.py
+```
+This will start the Streamlit server, and the HARM Bot application will open in your default web browser.
+
+## Usage
+
+The HARM Bot application provides several features that can be accessed from the sidebar menu:
+
+1. **Category Predictor**: Enter the URL of a YouTube video, and the bot will predict the category of the video if it's educational.
+2. **Channel Stats Viewer**: Enter the URL of a YouTube video, and the bot will show the statistics of the video's channel.
+3. **Search Videos**: Search for YouTube videos by entering keywords.
+4. **Playlist Videos Predictor**: Enter a YouTube playlist URL, and the bot will predict the categories of the videos in the playlist if they are educational.
+5. **Educational Content in a Video**: Enter a YouTube video URL, and the bot will estimate the percentage of educational content in the video.
+
+## Contributing
+
+If you'd like to contribute to this project, please feel free to submit a pull request or open an issue on the GitHub repository.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+Special thanks to the HARM team for creating this application:
+
+- Harshul Nanda
+- Abhijeet Saroha
+- Rishabh Sagar
+- Mayank Arora
+
+You can find more information about the team and the project on the [HARM LinkedIn page](https://www.linkedin.com/company/82157293/admin/).
